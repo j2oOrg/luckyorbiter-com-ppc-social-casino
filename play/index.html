@@ -3,37 +3,44 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Play — JackpotHub.cloud</title>
-  <meta name="description" content="Play free-to-play social casino style demos on JackpotHub.cloud. No real-money gambling or prizes. 18+ only.">
+  <title>Play — Lucky Orbiter</title>
+  <meta name="description" content="Play free-to-play, social casino style experiences on Lucky Orbiter. No real-money gambling or prizes. 18+ only.">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <style>
 :root{
-  --bg: #060a14;
-  --panel: rgba(255,255,255,0.05);
-  --panel-strong: rgba(255,255,255,0.08);
-  --text: #e9eeff;
-  --muted: #b7c2db;
-  --heading: #fdf6ff;
-  --accent: #f5c452;
-  --accent-2: #70f0c7;
-  --border: rgba(255,255,255,0.12);
-  --radius: 14px;
+  --bg: #050915;
+  --bg-2: #0a1022;
+  --panel: rgba(255,255,255,0.06);
+  --panel-strong: rgba(255,255,255,0.1);
+  --text: #e9ecf8;
+  --muted: #9fb3d5;
+  --heading: #f7f8ff;
+  --accent: #ff866c;
+  --accent-2: #6ae5c1;
+  --border: rgba(255,255,255,0.14);
+  --radius: 16px;
   --font-heading: "Space Grotesk", "Inter", system-ui, sans-serif;
   --font-body: "Poppins", "Inter", system-ui, sans-serif;
-  --shadow: 0 24px 70px rgba(0,0,0,0.5);
+  --shadow: 0 30px 90px rgba(0,0,0,0.55);
 }
 
 *{box-sizing:border-box}
-body{
+body.lo-shell-x4p9{
   margin:0;
   font-family:var(--font-body);
   background:
-    radial-gradient(circle at 15% 10%, rgba(112,240,199,0.08), transparent 28%),
-    radial-gradient(circle at 80% 8%, rgba(245,196,82,0.12), transparent 30%),
-    linear-gradient(140deg, #070c19, #050812 60%, #0b1021);
+    radial-gradient(circle at 20% 12%, rgba(255,134,108,0.14), transparent 32%),
+    radial-gradient(circle at 82% 10%, rgba(106,229,193,0.18), transparent 38%),
+    linear-gradient(145deg, var(--bg), var(--bg-2) 60%, #040814);
   color:var(--text);
-  line-height:1.65;
+  line-height:1.7;
   min-height:100vh;
   -webkit-font-smoothing:antialiased;
 }
@@ -43,174 +50,182 @@ a:hover{color:var(--accent); opacity:0.9}
 .link-accent:hover{color:var(--accent-2)}
 img{max-width:100%; display:block}
 
-.container{width:min(1140px, 100% - 2rem); margin:0 auto}
+.container{width:min(1100px, 100% - 2.4rem); margin:0 auto}
 
-.notice-banner{
+.lo-banner-e7k2{
   background:linear-gradient(135deg, var(--accent), var(--accent-2));
-  color:#031017;
+  color:#041018;
   padding:0.55rem 0;
   text-align:center;
   font-weight:700;
-  border-bottom:1px solid rgba(0,0,0,0.2);
-  box-shadow:0 10px 28px rgba(0,0,0,0.35);
+  border-bottom:1px solid rgba(0,0,0,0.28);
+  box-shadow:0 12px 32px rgba(0,0,0,0.38);
   position:relative;
   z-index:70;
 }
-.banner-inner{
+.lo-banner-inner-v4r6{
   display:flex;
   align-items:center;
   justify-content:center;
-  gap:0.65rem;
+  gap:0.7rem;
   flex-wrap:wrap;
-  font-size:0.97rem;
+  font-size:0.98rem;
 }
-.banner-pill{
-  background:rgba(0,0,0,0.12);
-  color:#031017;
-  padding:0.35rem 0.7rem;
+.lo-pill-w6a4{
+  display:inline-flex;
+  align-items:center;
+  gap:0.4rem;
+  padding:0.42rem 0.82rem;
   border-radius:999px;
+  background:rgba(0,0,0,0.12);
+  color:#041018;
   font-weight:800;
   letter-spacing:0.5px;
 }
+.lo-pill-accent-d5j8{
+  background:rgba(255,134,108,0.16);
+  color:var(--accent);
+  border:1px solid rgba(255,134,108,0.5);
+}
 
-.jackpothub-cloud-nav{
-  background:rgba(6,10,20,0.92);
+.lo-nav-b7k3{
+  background:rgba(6,10,20,0.9);
   border-bottom:1px solid var(--border);
   backdrop-filter:blur(14px);
   position:sticky;
   top:0;
   z-index:60;
-  padding:0.85rem 0;
+  padding:0.9rem 0;
 }
-.jackpothub-cloud-nav .navbar-brand{
+.lo-brand-c8r4{
   display:flex;
   align-items:center;
   gap:0.65rem;
   padding:0;
 }
-.brand-logo{
-  width:132px;
+.lo-logo-p9f1{
+  width:126px;
   height:auto;
   display:block;
-  border-radius:12px;
-  box-shadow:0 12px 30px rgba(0,0,0,0.45);
+  border-radius:14px;
+  box-shadow:0 14px 34px rgba(0,0,0,0.46);
 }
-.jackpothub-cloud-nav .nav-link{
+.lo-nav-link-m5n7{
   color:var(--text);
   font-weight:600;
-  margin:0 0.35rem;
-  padding:0.35rem 0.65rem;
+  margin:0 0.38rem;
+  padding:0.4rem 0.7rem;
   border-radius:10px;
   transition:background .15s, color .15s;
 }
-.jackpothub-cloud-nav .nav-link.active,
-.jackpothub-cloud-nav .nav-link:hover{
+.lo-nav-link-m5n7:hover,
+.lo-nav-link-m5n7.active{
   background:var(--panel);
   color:var(--accent);
 }
-.navbar-toggler{
-  border:1px solid var(--border);
-  color:var(--text);
-}
-.navbar-toggler:focus{box-shadow:0 0 0 3px rgba(112,240,199,0.18)}
+.navbar-toggler{border:1px solid var(--border); color:var(--text);}
+.navbar-toggler:focus{box-shadow:0 0 0 3px rgba(106,229,193,0.2)}
 
-.jackpothub-cloud-btn{
+.lo-btn-c5n0{
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  gap:0.4rem;
-  padding:0.78rem 1.6rem;
-  border-radius:12px;
+  gap:0.45rem;
+  padding:0.8rem 1.7rem;
+  border-radius:14px;
   font-weight:700;
   border:1px solid transparent;
   cursor:pointer;
   transition:transform .16s ease, box-shadow .2s ease, background .2s ease, color .2s ease;
   text-decoration:none;
 }
-.jackpothub-cloud-btn.primary{
-  background:linear-gradient(135deg, var(--accent), var(--accent-2));
-  color:#060a14;
-  box-shadow:0 14px 36px rgba(0,0,0,0.4);
+.lo-btn-solid-f2h1{
+  background:linear-gradient(135deg, var(--accent), #ffb36c);
+  color:#041018;
+  box-shadow:0 16px 38px rgba(0,0,0,0.45);
 }
-.jackpothub-cloud-btn.primary:hover{transform:translateY(-2px)}
-.jackpothub-cloud-btn.outline{
+.lo-btn-solid-f2h1:hover{transform:translateY(-2px)}
+.lo-btn-ghost-q8v4{
   background:var(--panel);
   border-color:var(--border);
   color:var(--text);
 }
-.jackpothub-cloud-btn.outline:hover{color:var(--accent)}
+.lo-btn-ghost-q8v4:hover{color:var(--accent)}
 
-.section-title{
+.lo-title-h1c3{
   font-family:var(--font-heading);
   color:var(--heading);
-  font-size:2.1rem;
-  margin:0 0 0.45rem;
+  font-size:2.4rem;
+  margin:0 0 0.5rem;
 }
-.section-sub{margin:0 0 1rem; color:var(--muted)}
+.lo-subtitle-j7m2{margin:0 0 1rem; color:var(--muted)}
 
-.jackpothub-cloud-play{
-  padding:3.5rem 0;
+.lo-play-wrap-n3v7{
+  padding:3.6rem 0;
   text-align:center;
 }
-.game-wrapper{
-  margin:2rem auto;
+.lo-game-grid-t1q8{
   display:flex;
-  justify-content:center;
+  flex-direction:column;
+  gap:1.6rem;
+  margin:2rem auto 0;
+  max-width:940px;
 }
-.game-wrapper > .w-100{
-  width:100%;
-  max-width:920px;
-  text-align:center;
+.lo-game-card-b6u9{
+  background:var(--panel);
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:1.4rem;
+  box-shadow:var(--shadow);
 }
-.game-frame{
+.lo-frame-u8l3{
   position:relative;
   width:100%;
-  max-width:920px;
   border-radius:14px;
   overflow:hidden;
-  background:linear-gradient(160deg, rgba(245,196,82,0.14), rgba(112,240,199,0.08));
+  background:linear-gradient(160deg, rgba(255,134,108,0.16), rgba(106,229,193,0.12));
   border:1px solid var(--border);
   box-shadow:0 16px 40px rgba(0,0,0,0.45);
 }
-.game-frame::before{content:""; display:block; padding-top:56.25%;}
-.game-frame iframe{
+.lo-frame-u8l3::before{content:""; display:block; padding-top:56.25%;}
+.lo-frame-u8l3 iframe{
   position:absolute;
   inset:0;
   width:100%;
   height:100%;
   border:0;
 }
-.game-caption{
-  margin-top:0.5rem;
+.lo-game-caption-j5w2{
+  margin-top:0.65rem;
   color:var(--muted);
   font-weight:600;
 }
 
-.jackpothub-cloud-footer{
-  background:rgba(6,10,20,0.95);
+.lo-footer-i2m8{
+  background:rgba(5,9,21,0.96);
   color:var(--text);
   text-align:center;
-  padding:3.2rem 1rem 2.4rem;
+  padding:3rem 1rem 2.4rem;
   border-top:1px solid var(--border);
   position:relative;
   overflow:hidden;
 }
-.jackpothub-cloud-footer::before{
+.lo-footer-i2m8::before{
   content:"";
   position:absolute;
   inset:0;
-  background:radial-gradient(circle at 50% 20%, rgba(245,196,82,0.04), transparent 65%);
+  background:radial-gradient(circle at 50% 20%, rgba(255,134,108,0.05), transparent 65%);
   z-index:0;
 }
-.jackpothub-cloud-footer .container{position:relative; z-index:1}
-.footer-brand{
+.lo-footer-i2m8 .container{position:relative; z-index:1}
+.lo-footer-brand-p7a4{
   display:flex;
   align-items:center;
   justify-content:center;
   gap:0.7rem;
   margin-bottom:1rem;
 }
-.footer-links{
+.lo-footer-links-a5q9{
   display:flex;
   justify-content:center;
   gap:0.85rem;
@@ -219,22 +234,16 @@ img{max-width:100%; display:block}
   margin:0 0 1rem;
   list-style:none;
 }
-.footer-links a{
-  color:var(--accent);
-  font-weight:600;
-}
-.footer-links a:hover{color:var(--accent-2)}
-.footer-copy{
-  color:var(--muted);
-  margin:0;
-}
+.lo-footer-links-a5q9 a{color:var(--accent); font-weight:600;}
+.lo-footer-links-a5q9 a:hover{color:var(--accent-2)}
+.lo-footer-copy-m9t1{color:var(--muted); margin:0;}
 
-.jackpothub-cloud-scroll{
+.lo-scroll-btn-b2y7{
   position:fixed;
   right:22px;
   bottom:22px;
-  width:44px;
-  height:44px;
+  width:46px;
+  height:46px;
   border-radius:50%;
   border:none;
   background:var(--accent);
@@ -243,14 +252,14 @@ img{max-width:100%; display:block}
   align-items:center;
   justify-content:center;
   cursor:pointer;
-  box-shadow:0 14px 34px rgba(0,0,0,0.55);
+  box-shadow:0 16px 36px rgba(0,0,0,0.55);
   opacity:0;
   visibility:hidden;
   transition:all .16s;
   z-index:90;
 }
-.jackpothub-cloud-scroll.show{opacity:1; visibility:visible}
-.jackpothub-cloud-scroll:hover{background:var(--accent-2)}
+.lo-scroll-btn-b2y7.show{opacity:1; visibility:visible}
+.lo-scroll-btn-b2y7:hover{background:var(--accent-2)}
 
 .sr-only{
   position:absolute;
@@ -264,82 +273,84 @@ img{max-width:100%; display:block}
 }
 
 @media (max-width: 768px){
-  .game-frame{max-width:100%}
-  .jackpothub-cloud-nav{padding:0.75rem 0}
+  .lo-nav-b7k3{padding:0.75rem 0}
 }
 @media (max-width: 576px){
-  .brand-logo{width:114px}
+  .lo-logo-p9f1{width:110px}
 }
   </style>
 </head>
-<body class="jackpothub-cloud jackpothub-cloud-o9e2">
+<body class="lo-shell-x4p9">
 
 <!-- Persistent responsible-play banner -->
-<div class="notice-banner notice-banner-d4v6">
-  <div class="container container-n5s9 banner-inner banner-inner-e0g3">
-    <span class="banner-pill banner-pill-u5l2">18+</span>
-    <span>JackpotHub is a free-to-play social casino experience. No real-money gambling or prizes. 18+ only. Please play responsibly.</span>
+<div class="lo-banner-e7k2">
+  <div class="container lo-banner-inner-v4r6">
+    <span class="lo-pill-w6a4">18+</span>
+    <span>Lucky Orbiter is a free-to-play social casino style experience. No real-money gambling or prizes. 18+ only. Please play responsibly.</span>
   </div>
 </div>
 
 <!-- Header / navigation -->
-<nav class="navbar navbar-h1d6 navbar-expand-lg navbar-expand-lg-x1e0 jackpothub-cloud-nav jackpothub-cloud-nav-s2b8">
-  <div class="container container-n5s9 d-flex d-flex-l2v1 align-items-center align-items-center-i0e4 justify-content-between justify-content-between-u9t9">
-    <a class="navbar-brand navbar-brand-e4n4" href="/">
-      <img class="brand-logo brand-logo-y2l5" src="../assets/img.png" alt="JackpotHub logo">
-      <span class="sr-only sr-only-l6n5">JackpotHub.cloud</span>
+<nav class="navbar navbar-expand-lg lo-nav-b7k3">
+  <div class="container d-flex align-items-center justify-content-between">
+    <a class="navbar-brand lo-brand-c8r4" href="/">
+      <img class="lo-logo-p9f1" src="../assets/img.png" alt="Lucky Orbiter logo">
+      <span class="sr-only">Lucky Orbiter</span>
     </a>
-    <button class="navbar-toggler navbar-toggler-s3p3" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon navbar-toggler-icon-k8w2"><i class="fas fas-i3o7 fa-bars fa-bars-k2s8"></i></span>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
     </button>
 
-    <div class="collapse collapse-s1p8 navbar-collapse navbar-collapse-u8n2 justify-content-end justify-content-end-q4o3" id="navMenu">
-      <ul class="navbar-nav navbar-nav-s2k8 mb-2 mb-2-s6k8 mb-lg-0 mb-lg-0-w4j8 align-items-lg-center align-items-lg-center-u1g7">
-        <li class="nav-item nav-item-t0x4"><a class="nav-link nav-link-o9u4" href="/">Home</a></li>
-        <li class="nav-item nav-item-t0x4"><a class="nav-link nav-link-o9u4 active active-o1t1" href="/play">Play</a></li>
-        <li class="nav-item nav-item-t0x4"><a class="nav-link nav-link-o9u4" href="/#contact">Contact</a></li>
-        <li class="nav-item nav-item-t0x4"><a class="nav-link nav-link-o9u4" href="/disclaimer">Disclaimer</a></li>
-        <li class="nav-item nav-item-t0x4"><a class="nav-link nav-link-o9u4" href="/privacy-policy">Privacy</a></li>
-        <li class="nav-item nav-item-t0x4"><a class="nav-link nav-link-o9u4" href="/terms-and-conditions">Terms</a></li>
+    <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+      <ul class="navbar-nav mb-2 mb-lg-0 align-items-lg-center">
+        <li class="nav-item"><a class="nav-link lo-nav-link-m5n7" href="/">Home</a></li>
+        <li class="nav-item"><a class="nav-link lo-nav-link-m5n7 active" href="/play">Play</a></li>
+        <li class="nav-item"><a class="nav-link lo-nav-link-m5n7" href="/#contact">Contact</a></li>
+        <li class="nav-item"><a class="nav-link lo-nav-link-m5n7" href="/disclaimer">Disclaimer</a></li>
+        <li class="nav-item"><a class="nav-link lo-nav-link-m5n7" href="/privacy-policy">Privacy</a></li>
+        <li class="nav-item"><a class="nav-link lo-nav-link-m5n7" href="/terms-and-conditions">Terms</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
 <main>
-  <!-- Play gallery of external demos -->
-  <section class="jackpothub-cloud-play jackpothub-cloud-play-n0x6">
-    <div class="container container-n5s9">
-      <h1 class="section-title section-title-a7o7">Play demos</h1>
-      <p class="section-sub section-sub-x7g6">Free-to-play social casino style experiences. External embeds, no deposits or prizes.</p>
+  <!-- Play gallery of external launches -->
+  <section class="lo-play-wrap-n3v7">
+    <div class="container">
+      <h1 class="lo-title-h1c3">Play experiences</h1>
+      <p class="lo-subtitle-j7m2">Free-to-play, social casino style experiences. External launches, no deposits or prizes.</p>
 
-      <div class="game-wrapper game-wrapper-e0p2">
-        <div class="w-100 w-100-h5f9">
-          <div class="pill pill-a5k8 accent accent-l0a5">Live preview</div>
-          <div class="game-frame game-frame-d2c1">
+      <div class="lo-game-grid-t1q8">
+        <div class="lo-game-card-b6u9">
+          <div class="lo-pill-w6a4 lo-pill-accent-d5j8">Safety first</div>
+          <div class="lo-frame-u8l3">
+            <div class="lo-game-caption-j5w2">18+ entertainment only. These launches stay wallet-free and prize-free.</div>
+          </div>
+        </div>
+
+        <div class="lo-game-card-b6u9">
+          <div class="lo-pill-w6a4 lo-pill-accent-d5j8">Live preview</div>
+          <div class="lo-frame-u8l3">
             <iframe src="https://released.playngonetwork.com/casino/ContainerLauncher?pid=2&gid=stadiumofriches&lang=en_GB&practice=1&channel=desktop&demo=2&refresh=1763688384036" title="Stadium of Riches" allowfullscreen loading="lazy"></iframe>
           </div>
-          <p class="game-caption game-caption-y9s6">Embedded demo: Stadium of Riches (external launch).</p>
+          <p class="lo-game-caption-j5w2">Embedded experience: Stadium of Riches (external launch).</p>
         </div>
-      </div>
 
-      <div class="game-wrapper game-wrapper-e0p2">
-        <div class="w-100 w-100-h5f9">
-          <div class="pill pill-a5k8 accent accent-l0a5">Mobile-friendly preview</div>
-          <div class="game-frame game-frame-d2c1">
+        <div class="lo-game-card-b6u9">
+          <div class="lo-pill-w6a4 lo-pill-accent-d5j8">Mobile-friendly preview</div>
+          <div class="lo-frame-u8l3">
             <iframe src="https://released.playngonetwork.com/casino/ContainerLauncher?pid=2&gid=ringsofprosperity&lang=en_GB&practice=1&channel=mobile&demo=2&refresh=1763688502976" title="Rings of Prosperity" allowfullscreen loading="lazy"></iframe>
           </div>
-          <p class="game-caption game-caption-y9s6">Embedded demo: Rings of Prosperity (external launch).</p>
+          <p class="lo-game-caption-j5w2">Embedded experience: Rings of Prosperity (external launch).</p>
         </div>
-      </div>
 
-      <div class="game-wrapper game-wrapper-e0p2">
-        <div class="w-100 w-100-h5f9">
-          <div class="pill pill-a5k8 accent accent-l0a5">Low-motion preview</div>
-          <div class="game-frame game-frame-d2c1">
+        <div class="lo-game-card-b6u9">
+          <div class="lo-pill-w6a4 lo-pill-accent-d5j8">Low-motion preview</div>
+          <div class="lo-frame-u8l3">
             <iframe src="https://released.playngonetwork.com/casino/ContainerLauncher?pid=2&gid=lawnndisorder&lang=en_GB&practice=1&channel=mobile&demo=2&refresh=1763688570336" title="Lawn n Disorder" allowfullscreen loading="lazy"></iframe>
           </div>
-          <p class="game-caption game-caption-y9s6">Embedded demo: Lawn n Disorder (external launch).</p>
+          <p class="lo-game-caption-j5w2">Embedded experience: Lawn n Disorder (external launch).</p>
         </div>
       </div>
     </div>
@@ -347,14 +358,14 @@ img{max-width:100%; display:block}
 </main>
 
 <!-- Footer -->
-<footer class="jackpothub-cloud-footer jackpothub-cloud-footer-e3t4">
-  <div class="container container-n5s9">
-    <div class="footer-brand footer-brand-b0c2">
-      <img class="brand-logo brand-logo-y2l5" src="../assets/img.png" alt="JackpotHub logo">
-      <span class="sr-only sr-only-l6n5">JackpotHub.cloud</span>
+<footer class="lo-footer-i2m8">
+  <div class="container">
+    <div class="lo-footer-brand-p7a4">
+      <img class="lo-logo-p9f1" src="../assets/img.png" alt="Lucky Orbiter logo">
+      <span class="sr-only">Lucky Orbiter</span>
     </div>
 
-    <ul class="footer-links footer-links-o9a5">
+    <ul class="lo-footer-links-a5q9">
       <li><a href="/">Home</a></li>
       <li><a href="/play">Play</a></li>
       <li><a href="/#contact">Contact</a></li>
@@ -363,14 +374,14 @@ img{max-width:100%; display:block}
       <li><a href="/terms-and-conditions">Terms &amp; Conditions</a></li>
     </ul>
 
-    <p class="footer-copy footer-copy-f9e9">
-      © <span data-year></span> JackpotHub.cloud
+    <p class="lo-footer-copy-m9t1">
+      © <span data-year></span> Lucky Orbiter
     </p>
   </div>
 </footer>
 
-<button id="hubScrollTop" class="jackpothub-cloud-scroll jackpothub-cloud-scroll-b6z2" aria-label="Scroll to top">
-  <i class="fas fas-i3o7 fa-chevron-up fa-chevron-up-v5k2"></i>
+<button id="hubScrollTop" class="lo-scroll-btn-b2y7" aria-label="Scroll to top">
+  <i class="fas fa-chevron-up"></i>
 </button>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
